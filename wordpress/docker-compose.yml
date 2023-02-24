@@ -1,0 +1,20 @@
+services:
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+    - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: grvision
+      WORDPRESS_DB_PASSWORD: grvision
+      WORDPRESS_DB_NAME: grvision
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: grvision
+      MYSQL_USER: grvision
+      MYSQL_PASSWORD: grvision
+      MYSQL_ROOT_PASSWORD: 1234
