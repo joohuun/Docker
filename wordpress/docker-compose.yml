@@ -6,15 +6,15 @@ services:
     - 8080:80
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: grvision
-      WORDPRESS_DB_PASSWORD: grvision
-      WORDPRESS_DB_NAME: grvision
+      WORDPRESS_DB_USER: testuser
+      WORDPRESS_DB_PASSWORD: testpass
+      WORDPRESS_DB_NAME: testdb
 
   db:
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: grvision
-      MYSQL_USER: grvision
-      MYSQL_PASSWORD: grvision
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpass
       MYSQL_ROOT_PASSWORD: 1234
